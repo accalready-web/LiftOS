@@ -8,9 +8,32 @@ Thumbs.db
 node_modules/
 dist/
 build/
+web-build/
 .next/
 .venv/
 __pycache__/
+
+# Expo
+.expo/
+expo-env.d.ts
+.metro-health-check*
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+/ios
+/android
+
+# Debug & TypeScript
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.tsbuildinfo
 
 # Environment & Secrets
 .env
