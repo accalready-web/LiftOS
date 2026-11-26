@@ -1,6 +1,6 @@
 # LiftOS — Project Status
 
-- **Current Phase:** Implementation - Phase 1: Setup & Core Data (Step 1.3 Done → Step 1.4 Ready)
+- **Current Phase:** Implementation - Phase 2: UI & Features (Step 2.2 Done → Step 2.3 Ready)
 - **Last Updated:** 2026-11-26
 
 ## Completed
@@ -29,6 +29,27 @@
   - Created `app/(auth)/login.tsx` & updated `app/_layout.tsx` — Responsive Sign In / Sign Up screen + Local-Only offline mode + auth/local-only routing guard
   - Note: `node_modules` is not installed in this workspace yet, so `tsc --noEmit` should be run after `npm install`
 
+- [x] Completed **Step 1.4 (Seed Exercises & Sync Engine)**:
+  - Created `src/constants/seedExercises.json` — 85 foundational exercises with deterministic UUIDs (`10000000-0000-4000-8000-000000000001`..`0085`) covering all muscle groups and equipment types
+  - Created `src/services/seedService.ts` — `seedSystemExercisesIfNeeded()` idempotent auto-seed into Local DB on app initialization (`sync_status: 'synced'`, `user_id: null`)
+  - Created `src/services/syncEngine.ts` — `syncWithSupabase()` with dependency-ordered Push Outbox (`routine_folders` → `exercises` → `routines` → `routine_exercises` → `routine_sets` → `workouts` → `workout_exercises` → `workout_sets` → `user_settings`), Delta Pull (`updated_at > last_synced_at`), Last-Write-Wins (`resolveLwwConflicts`), Soft Delete support, and in-flight deduplication lock
+  - Updated `src/stores/useAuthStore.ts` — Integrated `seedSystemExercisesIfNeeded()`, `syncNow()`, `subscribeSyncState`, and background auto-sync on initialize/signIn/signUp
+  - Updated `app/_layout.tsx` — Added auto-sync on `AppState` foreground (`active`) and Web `online`/`offline` events
+  - Updated `app/(tabs)/_layout.tsx` & `app/(tabs)/settings.tsx` — Connected Sidebar sync badge and added Cloud Sync card with `Sync Now` button
+  - Verified with `npx tsc --noEmit` (0 errors) and JSON uniqueness check (`85` seeds, `85` unique IDs)
+- [x] Completed **Step 2.1 (Exercise Library & Custom Exercises)**:
+  - Created `src/utils/uuid.ts` (`generateUuid()` cross-platform RFC-4122 v4) and `src/constants/exercises.ts` (`MUSCLE_GROUPS`, `EQUIPMENT_TYPES`, label formatters)
+  - Created `src/services/exerciseService.ts` — `listExercises()`, `getExerciseById()`, `getExerciseHistory()`, `createCustomExercise()`, `updateCustomExercise()`, `setExercisePreferredWeightUnit()`, `deleteCustomExercise()`
+  - Created reusable components: `src/components/exercise/ExercisePicker.tsx`, `src/components/exercise/CustomExerciseModal.tsx`, `src/components/exercise/ExerciseDetailView.tsx`
+  - Built `app/(tabs)/exercises.tsx` (Responsive: Mobile list → `/exercises/[id]`, Desktop `>= 768px` split-pane with live detail & unit override) and `app/exercises/[id].tsx` (registered in `app/_layout.tsx`)
+  - Verified with `npx tsc --noEmit` (0 errors)
+- [x] Completed **Step 2.2 (Routine Folders & Routine Builder)**:
+  - Created `src/services/routineService.ts` — CRUD for `routine_folders` (`listRoutineFolders`, `createRoutineFolder`, `renameRoutineFolder`, `deleteRoutineFolder`) and `routines`/`routine_exercises`/`routine_sets` (`listRoutinesWithSummary`, `getRoutineWithDetails`, `saveRoutineWithDetails`, `duplicateRoutine`, `deleteRoutine`)
+  - Created `src/components/routine/FolderModal.tsx` and `src/components/routine/RoutineCard.tsx`
+  - Built `app/(tabs)/index.tsx` (Workouts Hub: `Start Empty Workout`, Folder filter chips + rename/delete bar, responsive 1/2/3-col Routine Cards grid with `Start`, `Edit`, `Duplicate`, `Delete`)
+  - Built `app/routine/[id].tsx` (Routine Builder: name, folder, notes, exercise reordering, per-exercise rest timer & notes, tappable Set Type badge `W`/`N`/`D`/`F`, Weight/Reps/RPE inputs; Mobile Modal `ExercisePicker` / Desktop `>= 768px` Split-pane `ExercisePicker` + `CustomExerciseModal`), registered in `app/_layout.tsx`
+  - Verified with `npx tsc --noEmit` (0 errors)
+
 ## Key Decisions & Files Changed
 - **Updated `docs/01_BRIEF.md`:** Finalized LiftOS brief (Hevy-inspired personal workout tracker).
 - **Updated `docs/02_DESIGN.md`:** Completed full Phase 02 Design & Architecture specification.
@@ -50,7 +71,7 @@
   - `src/components/layout/MiniWorkoutBar.tsx` — Mini workout bar component
 
 ## In Progress / Next Step
-- [ ] Start **Implementation Phase 1 — Step 1.4 (Seed Exercises & Sync Engine)**: Read `STATUS.md`, `docs/02_DESIGN.md` (Section 1.2, 4.2), and `docs/03_TASKS.md` (Step 1.4), then create `src/constants/seedExercises.json` with deterministic UUIDs, auto-seed logic on first launch, and `src/services/syncEngine.ts` (Push Outbox → Pull Delta with Last-Write-Wins & Soft Delete).
+- [ ] Start **Implementation Phase 2 — Step 2.3 (Active Workout Logger — Core In-Gym UX)**: Read `STATUS.md`, `docs/02_DESIGN.md` (Section 2.2, Section 3.2 #4, Section 4.2 #7–9), and `docs/03_TASKS.md` (Step 2.3), then create `src/stores/useActiveWorkoutStore.ts` (with `active_workout_draft` auto-save), `src/services/workoutService.ts` (Previous lookup, kg/lbs conversion, volume calculation), `app/workout/active.tsx`, `src/components/workout/` (`ExerciseCard`, `SetRow`, `SetTypeBadge`), and wire `MiniWorkoutBar` + `Start Empty Workout` / `Start Routine` buttons.
 
 ## Key Files
 - `GEMINI.md` — Global project rules for Antigravity

@@ -20,6 +20,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { getColors, Layout, Spacing, FontSize, FontWeight } from '@/constants/theme';
 import { useSettingsStore } from '@/stores/useSettingsStore';
+import { useAuthStore } from '@/stores/useAuthStore';
 import { MiniWorkoutBar } from '@/components/layout/MiniWorkoutBar';
 
 // ─── Tab definitions ────────────────────────────────────────────
@@ -44,6 +45,29 @@ function SidebarNav() {
   const colors = getColors(theme);
   const pathname = usePathname();
   const insets = useSafeAreaInsets();
+  const syncStatus = useAuthStore((s) => s.syncStatus);
+  const session = useAuthStore((s) => s.session);
+  const syncNow = useAuthStore((s) => s.syncNow);
+
+  const syncLabel =
+    syncStatus === 'syncing'
+      ? 'Syncing...'
+      : syncStatus === 'synced'
+        ? 'Synced'
+        : syncStatus === 'error'
+          ? 'Sync Error'
+          : session
+            ? 'Ready to Sync'
+            : 'Offline';
+
+  const syncColor =
+    syncStatus === 'synced'
+      ? colors.success
+      : syncStatus === 'syncing'
+        ? colors.primary
+        : syncStatus === 'error'
+          ? colors.danger
+          : colors.textSecondary;
 
   const isActive = (name: string) => {
     if (name === 'index') return pathname === '/' || pathname === '/index';
@@ -120,20 +144,23 @@ function SidebarNav() {
         })}
       </ScrollView>
 
-      {/* Sync status badge (placeholder) */}
-      <View
+      {/* Sync status badge */}
+      <Pressable
+        onPress={() => {
+          if (session && syncStatus !== 'syncing') {
+            void syncNow();
+          }
+        }}
         style={[
           sidebarStyles.syncBadge,
           { borderTopColor: colors.border, paddingBottom: Spacing.lg },
         ]}
       >
-        <RefreshCw size={14} color={colors.textSecondary} />
-        <Text
-          style={[sidebarStyles.syncText, { color: colors.textSecondary }]}
-        >
-          Offline
+        <RefreshCw size={14} color={syncColor} />
+        <Text style={[sidebarStyles.syncText, { color: syncColor }]}>
+          {syncLabel}
         </Text>
-      </View>
+      </Pressable>
     </View>
   );
 }

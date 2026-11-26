@@ -1,0 +1,1011 @@
+[
+  {
+    "id": "10000000-0000-4000-8000-000000000001",
+    "name": "Barbell Bench Press",
+    "primary_muscle": "chest",
+    "secondary_muscles": ["triceps", "shoulders"],
+    "equipment": "barbell",
+    "instructions": [
+      "Lie flat on a bench with your eyes under the bar and feet planted firmly on the floor.",
+      "Grip the bar slightly wider than shoulder-width apart and unrack it over your chest.",
+      "Lower the bar under control to your mid-chest while keeping your elbows at about a 45-degree angle.",
+      "Press the bar back up to lockout without bouncing off your chest."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000002",
+    "name": "Incline Barbell Bench Press",
+    "primary_muscle": "chest",
+    "secondary_muscles": ["shoulders", "triceps"],
+    "equipment": "barbell",
+    "instructions": [
+      "Set an adjustable bench to a 30-to-45-degree incline.",
+      "Grip the barbell slightly wider than shoulder-width and unrack over your upper chest.",
+      "Lower the bar slowly to your upper chest just below the collarbone.",
+      "Drive the bar back up until your elbows are locked."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000003",
+    "name": "Dumbbell Bench Press",
+    "primary_muscle": "chest",
+    "secondary_muscles": ["triceps", "shoulders"],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Sit on a flat bench with dumbbells resting on your thighs, then kick them up as you lie back.",
+      "Hold the dumbbells over your chest with palms facing forward.",
+      "Lower the weights until they are level with your chest, feeling a stretch.",
+      "Press the dumbbells back up together without clanging them at the top."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000004",
+    "name": "Incline Dumbbell Press",
+    "primary_muscle": "chest",
+    "secondary_muscles": ["shoulders", "triceps"],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Lie back on an incline bench set to 30 degrees with a dumbbell in each hand.",
+      "Press the dumbbells directly over your upper chest.",
+      "Lower them under control to the sides of your upper chest.",
+      "Press back up to the starting position."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000005",
+    "name": "Dumbbell Fly",
+    "primary_muscle": "chest",
+    "secondary_muscles": ["shoulders"],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Lie on a flat bench holding dumbbells above your chest with palms facing each other.",
+      "With a slight bend in your elbows, open your arms wide in an arc until you feel a chest stretch.",
+      "Squeeze your chest to bring the dumbbells back together along the same arc."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000006",
+    "name": "Cable Crossover",
+    "primary_muscle": "chest",
+    "secondary_muscles": ["shoulders"],
+    "equipment": "cable",
+    "instructions": [
+      "Set both pulleys to chest or upper-chest height and grab a handle in each hand.",
+      "Step forward into a staggered stance with a slight lean.",
+      "With slightly bent elbows, sweep your hands together in front of your chest.",
+      "Return slowly to the stretched starting position."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000007",
+    "name": "Machine Chest Press",
+    "primary_muscle": "chest",
+    "secondary_muscles": ["triceps", "shoulders"],
+    "equipment": "machine",
+    "instructions": [
+      "Adjust the seat so the handles align with your mid-chest.",
+      "Grip the handles and press forward until your arms are extended.",
+      "Return the weight slowly without letting the stack slam."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000008",
+    "name": "Pec Deck Fly",
+    "primary_muscle": "chest",
+    "secondary_muscles": ["shoulders"],
+    "equipment": "machine",
+    "instructions": [
+      "Sit upright with your back against the pad and forearms or hands on the machine arms.",
+      "Bring the arms together in front of your chest, squeezing at peak contraction.",
+      "Control the return until your chest is stretched."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000009",
+    "name": "Push-Up",
+    "primary_muscle": "chest",
+    "secondary_muscles": ["triceps", "shoulders", "core"],
+    "equipment": "bodyweight",
+    "instructions": [
+      "Start in a high plank position with hands slightly wider than shoulder-width.",
+      "Keep your body in a straight line from head to heels and lower your chest toward the floor.",
+      "Push through your palms to return to the starting position."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000010",
+    "name": "Chest Dip",
+    "primary_muscle": "chest",
+    "secondary_muscles": ["triceps", "shoulders"],
+    "equipment": "bodyweight",
+    "instructions": [
+      "Support yourself on parallel dip bars and lean your torso slightly forward.",
+      "Lower your body by bending your elbows until your shoulders are slightly below your elbows.",
+      "Press back up to lockout while maintaining the forward lean."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000011",
+    "name": "Barbell Deadlift",
+    "primary_muscle": "back",
+    "secondary_muscles": ["hamstrings", "glutes", "forearms", "core"],
+    "equipment": "barbell",
+    "instructions": [
+      "Stand with feet hip-width apart and the barbell over the middle of your feet.",
+      "Hinge at the hips and bend your knees to grip the bar just outside your legs.",
+      "Brace your core, flatten your back, and drive through the floor to stand up with the bar.",
+      "Lower the bar back to the floor by hinging at the hips first, then bending the knees."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000012",
+    "name": "Barbell Bent-Over Row",
+    "primary_muscle": "back",
+    "secondary_muscles": ["biceps", "shoulders", "forearms"],
+    "equipment": "barbell",
+    "instructions": [
+      "Hold a barbell with an overhand grip slightly wider than shoulder-width.",
+      "Hinge forward at the hips to roughly a 45-degree torso angle with a flat back.",
+      "Pull the bar toward your lower chest/upper abdomen by driving your elbows back.",
+      "Lower the bar under control until your arms are fully extended."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000013",
+    "name": "Pendlay Row",
+    "primary_muscle": "back",
+    "secondary_muscles": ["biceps", "shoulders", "forearms"],
+    "equipment": "barbell",
+    "instructions": [
+      "Set the barbell on the floor and hinge until your torso is nearly parallel to the ground.",
+      "Pull the bar explosively to your lower chest, then lower it completely back to the floor each rep."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000014",
+    "name": "Pull-Up",
+    "primary_muscle": "back",
+    "secondary_muscles": ["biceps", "forearms", "core"],
+    "equipment": "bodyweight",
+    "instructions": [
+      "Hang from a pull-up bar with an overhand grip slightly wider than shoulder-width.",
+      "Pull your chest toward the bar by driving your elbows down and back.",
+      "Lower yourself all the way down to a full hang with control."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000015",
+    "name": "Chin-Up",
+    "primary_muscle": "back",
+    "secondary_muscles": ["biceps", "forearms"],
+    "equipment": "bodyweight",
+    "instructions": [
+      "Grip the bar with palms facing toward you at shoulder width.",
+      "Pull yourself up until your chin clears the bar.",
+      "Lower down slowly to full arm extension."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000016",
+    "name": "Lat Pulldown",
+    "primary_muscle": "back",
+    "secondary_muscles": ["biceps", "forearms"],
+    "equipment": "cable",
+    "instructions": [
+      "Sit at a lat pulldown station and secure your thighs under the pad.",
+      "Grip the wide bar outside shoulder-width and pull it down to your upper chest.",
+      "Squeeze your lats, then let the bar return smoothly to full overhead stretch."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000017",
+    "name": "Seated Cable Row",
+    "primary_muscle": "back",
+    "secondary_muscles": ["biceps", "shoulders", "forearms"],
+    "equipment": "cable",
+    "instructions": [
+      "Sit with feet braced on the platform and grab the V-bar or straight handle.",
+      "Keep your torso upright and pull the handle toward your midsection.",
+      "Squeeze your shoulder blades together, then extend your arms forward under control."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000018",
+    "name": "Single-Arm Dumbbell Row",
+    "primary_muscle": "back",
+    "secondary_muscles": ["biceps", "forearms"],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Place one hand and knee on a flat bench for support while holding a dumbbell in the opposite hand.",
+      "Pull the dumbbell up toward your hip, keeping your elbow close to your torso.",
+      "Lower the dumbbell back down until your lat stretches."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000019",
+    "name": "Chest-Supported Machine Row",
+    "primary_muscle": "back",
+    "secondary_muscles": ["biceps", "shoulders"],
+    "equipment": "machine",
+    "instructions": [
+      "Adjust the chest pad and sit facing the machine.",
+      "Grab the handles and pull them back while keeping your chest firmly against the pad.",
+      "Return the handles slowly to full extension."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000020",
+    "name": "T-Bar Row",
+    "primary_muscle": "back",
+    "secondary_muscles": ["biceps", "forearms", "shoulders"],
+    "equipment": "barbell",
+    "instructions": [
+      "Straddle the landmine or T-bar machine with knees slightly bent and back flat.",
+      "Pull the weight toward your chest by squeezing your upper back.",
+      "Lower under control without rounding your lower back."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000021",
+    "name": "Straight-Arm Lat Pulldown",
+    "primary_muscle": "back",
+    "secondary_muscles": ["triceps", "core"],
+    "equipment": "cable",
+    "instructions": [
+      "Stand facing a high pulley with a straight bar or rope attachment.",
+      "Keep your arms nearly straight and sweep the bar down to your thighs using your lats.",
+      "Control the return back to eye or overhead level."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000022",
+    "name": "Face Pull",
+    "primary_muscle": "shoulders",
+    "secondary_muscles": ["back"],
+    "equipment": "cable",
+    "instructions": [
+      "Set a cable pulley to upper-chest or face height with a rope attachment.",
+      "Pull the rope toward your forehead while flaring your elbows out and externally rotating your shoulders.",
+      "Return slowly to full arm extension."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000023",
+    "name": "Barbell Overhead Press",
+    "primary_muscle": "shoulders",
+    "secondary_muscles": ["triceps", "core"],
+    "equipment": "barbell",
+    "instructions": [
+      "Stand with feet shoulder-width apart and hold the barbell at upper-chest height.",
+      "Brace your glutes and core, then press the bar straight overhead until your arms lock out.",
+      "Lower the bar under control back to your upper chest."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000024",
+    "name": "Seated Dumbbell Shoulder Press",
+    "primary_muscle": "shoulders",
+    "secondary_muscles": ["triceps"],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Sit on an upright bench with back support, holding dumbbells at shoulder level.",
+      "Press the dumbbells overhead until your arms are nearly locked out.",
+      "Lower them back to ear or shoulder level under control."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000025",
+    "name": "Arnold Press",
+    "primary_muscle": "shoulders",
+    "secondary_muscles": ["triceps"],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Start with dumbbells in front of your shoulders, palms facing you.",
+      "Press overhead while rotating your palms to face forward at the top.",
+      "Reverse the rotation as you lower the weights back down."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000026",
+    "name": "Dumbbell Lateral Raise",
+    "primary_muscle": "shoulders",
+    "secondary_muscles": [],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Stand holding dumbbells at your sides with a slight bend in the elbows.",
+      "Raise your arms out to the sides until they reach shoulder height.",
+      "Lower the dumbbells slowly without swinging your torso."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000027",
+    "name": "Cable Lateral Raise",
+    "primary_muscle": "shoulders",
+    "secondary_muscles": [],
+    "equipment": "cable",
+    "instructions": [
+      "Set a single pulley to the lowest setting and stand sideways to the machine.",
+      "Grab the handle with your outside hand and raise your arm out to shoulder height.",
+      "Lower slowly back across your body."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000028",
+    "name": "Rear Delt Dumbbell Fly",
+    "primary_muscle": "shoulders",
+    "secondary_muscles": ["back"],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Hinge forward at the hips with a flat back, holding light dumbbells beneath your chest.",
+      "Raise the dumbbells out to the sides until your upper arms are parallel to the floor.",
+      "Lower slowly to the starting position."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000029",
+    "name": "Machine Shoulder Press",
+    "primary_muscle": "shoulders",
+    "secondary_muscles": ["triceps"],
+    "equipment": "machine",
+    "instructions": [
+      "Adjust the seat so the handles sit at shoulder height.",
+      "Press the handles overhead until your arms are extended.",
+      "Lower under control back to the starting position."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000030",
+    "name": "Barbell Upright Row",
+    "primary_muscle": "shoulders",
+    "secondary_muscles": ["biceps", "back"],
+    "equipment": "barbell",
+    "instructions": [
+      "Hold a barbell in front of your thighs with a shoulder-width overhand grip.",
+      "Pull the bar up along your body by leading with your elbows until upper arms are parallel to the floor.",
+      "Lower slowly back down."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000031",
+    "name": "Barbell Back Squat",
+    "primary_muscle": "quads",
+    "secondary_muscles": ["glutes", "hamstrings", "core"],
+    "equipment": "barbell",
+    "instructions": [
+      "Position the barbell across your upper traps and unrack it with feet shoulder-width apart.",
+      "Brace your core, push your hips back, and bend your knees until your thighs are at least parallel to the floor.",
+      "Drive through your mid-foot to stand back up to the starting position."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000032",
+    "name": "Barbell Front Squat",
+    "primary_muscle": "quads",
+    "secondary_muscles": ["glutes", "core"],
+    "equipment": "barbell",
+    "instructions": [
+      "Rest the barbell across the front of your shoulders using a clean or cross-arm grip.",
+      "Keep your elbows high and torso upright as you squat down to full depth.",
+      "Drive straight back up while keeping your chest proud."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000033",
+    "name": "Goblet Squat",
+    "primary_muscle": "quads",
+    "secondary_muscles": ["glutes", "core"],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Hold a dumbbell vertically against your chest with both hands.",
+      "Squat down between your knees while keeping your chest upright.",
+      "Push through your heels to return to standing."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000034",
+    "name": "Leg Press",
+    "primary_muscle": "quads",
+    "secondary_muscles": ["glutes", "hamstrings"],
+    "equipment": "machine",
+    "instructions": [
+      "Sit on the leg press sled with your back flat and feet shoulder-width apart on the platform.",
+      "Unlock the safeties and lower the sled until your knees reach roughly 90 degrees.",
+      "Press the platform away without locking your knees out aggressively."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000035",
+    "name": "Hack Squat",
+    "primary_muscle": "quads",
+    "secondary_muscles": ["glutes"],
+    "equipment": "machine",
+    "instructions": [
+      "Position your shoulders under the pads and feet slightly forward on the platform.",
+      "Lower yourself as deep as your mobility allows while keeping your heels planted.",
+      "Drive back up to the top."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000036",
+    "name": "Leg Extension",
+    "primary_muscle": "quads",
+    "secondary_muscles": [],
+    "equipment": "machine",
+    "instructions": [
+      "Sit in the machine with the ankle pad resting just above your feet.",
+      "Extend your knees until your legs are straight and squeeze your quads.",
+      "Lower the weight slowly back down."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000037",
+    "name": "Bulgarian Split Squat",
+    "primary_muscle": "quads",
+    "secondary_muscles": ["glutes", "hamstrings"],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Stand a couple of feet in front of a bench and place your rear foot behind you on the bench.",
+      "Lower your back knee toward the floor while keeping your front shin relatively vertical.",
+      "Push through your front foot to return to the start."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000038",
+    "name": "Walking Lunge",
+    "primary_muscle": "quads",
+    "secondary_muscles": ["glutes", "hamstrings"],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Hold dumbbells at your sides and step forward into a lunge until both knees are at 90 degrees.",
+      "Push through your front foot to step the back leg forward into the next lunge."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000039",
+    "name": "Romanian Deadlift",
+    "primary_muscle": "hamstrings",
+    "secondary_muscles": ["glutes", "back", "forearms"],
+    "equipment": "barbell",
+    "instructions": [
+      "Hold a barbell at hip height with a slight bend in your knees.",
+      "Push your hips straight back while lowering the bar along your thighs and shins.",
+      "Stop when you feel a strong hamstring stretch, then drive your hips forward to stand."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000040",
+    "name": "Dumbbell Romanian Deadlift",
+    "primary_muscle": "hamstrings",
+    "secondary_muscles": ["glutes", "back"],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Hold dumbbells in front of your thighs with knees slightly unlocked.",
+      "Hinge at the hips and lower the dumbbells close to your legs.",
+      "Squeeze your glutes and hamstrings to return upright."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000041",
+    "name": "Lying Leg Curl",
+    "primary_muscle": "hamstrings",
+    "secondary_muscles": ["calves"],
+    "equipment": "machine",
+    "instructions": [
+      "Lie face down on the leg curl machine with the pad just above your heels.",
+      "Curl your heels toward your glutes while keeping your hips pressed into the bench.",
+      "Lower the weight slowly back to extension."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000042",
+    "name": "Seated Leg Curl",
+    "primary_muscle": "hamstrings",
+    "secondary_muscles": ["calves"],
+    "equipment": "machine",
+    "instructions": [
+      "Adjust the lap pad securely over your thighs and the ankle pad behind your lower calves.",
+      "Pull your heels down and back under the seat as far as possible.",
+      "Control the return to full knee extension."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000043",
+    "name": "Good Morning",
+    "primary_muscle": "hamstrings",
+    "secondary_muscles": ["glutes", "back"],
+    "equipment": "barbell",
+    "instructions": [
+      "Place a barbell across your upper back like a back squat.",
+      "With slightly bent knees and a braced core, hinge at the hips until your torso is nearly parallel to the floor.",
+      "Drive your hips forward to return upright."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000044",
+    "name": "Barbell Hip Thrust",
+    "primary_muscle": "glutes",
+    "secondary_muscles": ["hamstrings", "quads"],
+    "equipment": "barbell",
+    "instructions": [
+      "Sit with your upper back against a bench and a padded barbell across your hip crease.",
+      "Plant your feet flat and drive through your heels to lift your hips until your torso is parallel to the floor.",
+      "Squeeze your glutes at the top, then lower under control."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000045",
+    "name": "Glute Bridge",
+    "primary_muscle": "glutes",
+    "secondary_muscles": ["hamstrings", "core"],
+    "equipment": "bodyweight",
+    "instructions": [
+      "Lie on your back with knees bent and feet flat on the floor.",
+      "Push through your heels to lift your hips until your body forms a straight line from shoulders to knees.",
+      "Pause and squeeze, then lower slowly."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000046",
+    "name": "Cable Glute Kickback",
+    "primary_muscle": "glutes",
+    "secondary_muscles": ["hamstrings"],
+    "equipment": "cable",
+    "instructions": [
+      "Attach an ankle cuff to a low cable pulley and face the machine.",
+      "Kick your leg straight back while squeezing your glute, avoiding excessive lower-back arch.",
+      "Return slowly to the starting position."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000047",
+    "name": "Standing Calf Raise",
+    "primary_muscle": "calves",
+    "secondary_muscles": [],
+    "equipment": "machine",
+    "instructions": [
+      "Stand with the balls of your feet on the platform and shoulders under the pads.",
+      "Lower your heels all the way down for a full stretch, then rise onto your toes as high as possible.",
+      "Pause at the top and lower slowly."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000048",
+    "name": "Seated Calf Raise",
+    "primary_muscle": "calves",
+    "secondary_muscles": [],
+    "equipment": "machine",
+    "instructions": [
+      "Sit with your knees under the pad and balls of your feet on the foot block.",
+      "Lower your heels fully, then press up onto your toes and squeeze."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000049",
+    "name": "Barbell Bicep Curl",
+    "primary_muscle": "biceps",
+    "secondary_muscles": ["forearms"],
+    "equipment": "barbell",
+    "instructions": [
+      "Stand tall holding a barbell with an underhand grip at shoulder width.",
+      "Keep your elbows pinned at your sides and curl the bar up to shoulder height.",
+      "Lower the bar slowly back to full extension."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000050",
+    "name": "EZ-Bar Preacher Curl",
+    "primary_muscle": "biceps",
+    "secondary_muscles": ["forearms"],
+    "equipment": "barbell",
+    "instructions": [
+      "Sit at a preacher bench with the back of your upper arms resting on the pad.",
+      "Curl the EZ-bar upward without lifting your elbows off the pad.",
+      "Lower slowly until your arms are nearly straight."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000051",
+    "name": "Dumbbell Bicep Curl",
+    "primary_muscle": "biceps",
+    "secondary_muscles": ["forearms"],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Stand holding dumbbells at your sides with palms facing forward or neutral.",
+      "Curl the dumbbells up while keeping your upper arms stationary.",
+      "Lower slowly back to the start."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000052",
+    "name": "Hammer Curl",
+    "primary_muscle": "biceps",
+    "secondary_muscles": ["forearms"],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Hold dumbbells at your sides with palms facing each other (neutral grip).",
+      "Curl the weights up while maintaining the neutral grip.",
+      "Lower under control."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000053",
+    "name": "Incline Dumbbell Curl",
+    "primary_muscle": "biceps",
+    "secondary_muscles": ["forearms"],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Sit on a 45-degree incline bench letting your arms hang straight down behind your torso.",
+      "Curl the dumbbells up while keeping your elbows back.",
+      "Lower slowly to feel a deep bicep stretch."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000054",
+    "name": "Cable Bicep Curl",
+    "primary_muscle": "biceps",
+    "secondary_muscles": ["forearms"],
+    "equipment": "cable",
+    "instructions": [
+      "Attach a straight or EZ bar to a low pulley and hold it with an underhand grip.",
+      "Curl the bar toward your shoulders while keeping your elbows steady.",
+      "Lower slowly with constant cable tension."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000055",
+    "name": "Concentration Curl",
+    "primary_muscle": "biceps",
+    "secondary_muscles": [],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Sit on a bench, brace your working elbow against your inner thigh.",
+      "Curl the dumbbell toward your shoulder and squeeze at the top.",
+      "Lower slowly to full extension."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000056",
+    "name": "Close-Grip Barbell Bench Press",
+    "primary_muscle": "triceps",
+    "secondary_muscles": ["chest", "shoulders"],
+    "equipment": "barbell",
+    "instructions": [
+      "Lie on a flat bench and grip the barbell roughly shoulder-width apart.",
+      "Lower the bar to your lower chest while keeping your elbows tucked close to your sides.",
+      "Press back up to lockout."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000057",
+    "name": "Triceps Rope Pushdown",
+    "primary_muscle": "triceps",
+    "secondary_muscles": [],
+    "equipment": "cable",
+    "instructions": [
+      "Attach a rope to a high pulley and tuck your elbows at your sides.",
+      "Press the rope down and spread the ends apart at the bottom to fully contract your triceps.",
+      "Return slowly to 90 degrees or slightly above."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000058",
+    "name": "Triceps Bar Pushdown",
+    "primary_muscle": "triceps",
+    "secondary_muscles": [],
+    "equipment": "cable",
+    "instructions": [
+      "Hold a straight or V-bar attached to a high pulley with elbows tucked.",
+      "Push the bar down until your arms are fully extended.",
+      "Control the bar back up without letting your elbows flare."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000059",
+    "name": "EZ-Bar Skull Crusher",
+    "primary_muscle": "triceps",
+    "secondary_muscles": [],
+    "equipment": "barbell",
+    "instructions": [
+      "Lie on a flat bench holding an EZ-bar straight above your chest.",
+      "Bend your elbows to lower the bar toward your forehead or just behind your head.",
+      "Extend your elbows to press the bar back up."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000060",
+    "name": "Overhead Cable Triceps Extension",
+    "primary_muscle": "triceps",
+    "secondary_muscles": [],
+    "equipment": "cable",
+    "instructions": [
+      "Face away from a low or mid pulley holding a rope overhead.",
+      "Keep your elbows pointed forward and extend your arms overhead.",
+      "Bend your elbows slowly behind your head for a full stretch."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000061",
+    "name": "Dumbbell Overhead Triceps Extension",
+    "primary_muscle": "triceps",
+    "secondary_muscles": [],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Sit or stand holding one dumbbell with both hands overhead.",
+      "Lower the dumbbell behind your head by bending your elbows.",
+      "Press the weight back up to lockout."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000062",
+    "name": "Triceps Bench Dip",
+    "primary_muscle": "triceps",
+    "secondary_muscles": ["chest", "shoulders"],
+    "equipment": "bodyweight",
+    "instructions": [
+      "Place your hands on a bench behind you with legs extended forward.",
+      "Lower your body by bending your elbows until upper arms are parallel to the floor.",
+      "Push through your palms to return to the top."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000063",
+    "name": "Plank",
+    "primary_muscle": "core",
+    "secondary_muscles": ["shoulders"],
+    "equipment": "bodyweight",
+    "instructions": [
+      "Support yourself on your forearms and toes with your body in a straight line.",
+      "Brace your abs and glutes tightly, holding the position without letting your hips sag."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000064",
+    "name": "Hanging Leg Raise",
+    "primary_muscle": "core",
+    "secondary_muscles": ["forearms"],
+    "equipment": "bodyweight",
+    "instructions": [
+      "Hang from a pull-up bar with arms straight.",
+      "Raise your legs in front of you until they are parallel or higher, curling your pelvis upward.",
+      "Lower slowly without swinging."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000065",
+    "name": "Cable Crunch",
+    "primary_muscle": "core",
+    "secondary_muscles": [],
+    "equipment": "cable",
+    "instructions": [
+      "Kneel below a high pulley holding a rope beside your head.",
+      "Flex your spine to crunch your elbows toward your knees while keeping your hips stationary.",
+      "Return slowly under control."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000066",
+    "name": "Ab Wheel Rollout",
+    "primary_muscle": "core",
+    "secondary_muscles": ["shoulders", "back"],
+    "equipment": "other",
+    "instructions": [
+      "Kneel on a mat holding an ab wheel directly under your shoulders.",
+      "Brace your core and roll forward as far as you can without your lower back sagging.",
+      "Pull back to the starting position using your abs."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000067",
+    "name": "Russian Twist",
+    "primary_muscle": "core",
+    "secondary_muscles": [],
+    "equipment": "bodyweight",
+    "instructions": [
+      "Sit on the floor with knees bent and torso leaned back slightly.",
+      "Rotate your torso side to side, tapping or holding a weight near each hip."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000068",
+    "name": "Farmer's Walk",
+    "primary_muscle": "forearms",
+    "secondary_muscles": ["core", "shoulders", "back"],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Pick up heavy dumbbells or farmer's handles at your sides.",
+      "Stand tall with shoulders back and walk briskly for the target distance or time."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000069",
+    "name": "Barbell Wrist Curl",
+    "primary_muscle": "forearms",
+    "secondary_muscles": [],
+    "equipment": "barbell",
+    "instructions": [
+      "Sit on a bench with your forearms resting on your thighs and palms facing up.",
+      "Curl the barbell upward using only your wrists, then lower slowly."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000070",
+    "name": "Kettlebell Swing",
+    "primary_muscle": "full_body",
+    "secondary_muscles": ["glutes", "hamstrings", "core", "shoulders"],
+    "equipment": "kettlebell",
+    "instructions": [
+      "Stand with feet slightly wider than shoulder-width and hike the kettlebell between your legs.",
+      "Snap your hips forward explosively to swing the kettlebell up to chest height.",
+      "Let the kettlebell fall back into the hip hinge and repeat smoothly."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000071",
+    "name": "Barbell Clean and Press",
+    "primary_muscle": "full_body",
+    "secondary_muscles": ["shoulders", "quads", "glutes", "back", "triceps"],
+    "equipment": "barbell",
+    "instructions": [
+      "Pull the barbell from the floor and explosively rack it onto your front shoulders.",
+      "Brace your core and press the bar overhead to lockout.",
+      "Lower the bar back to your shoulders and then to the floor."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000072",
+    "name": "Thruster",
+    "primary_muscle": "full_body",
+    "secondary_muscles": ["quads", "shoulders", "glutes", "triceps"],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Hold dumbbells at shoulder height and squat down to parallel.",
+      "Drive explosively out of the squat and use the momentum to press the dumbbells overhead."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000073",
+    "name": "Burpee",
+    "primary_muscle": "full_body",
+    "secondary_muscles": ["chest", "quads", "core"],
+    "equipment": "bodyweight",
+    "instructions": [
+      "Drop your hands to the floor and kick your feet back into a plank.",
+      "Perform a push-up, jump your feet back under you, and jump up with arms overhead."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000074",
+    "name": "Band Pull-Apart",
+    "primary_muscle": "shoulders",
+    "secondary_muscles": ["back"],
+    "equipment": "bands",
+    "instructions": [
+      "Hold a resistance band in front of you at shoulder height with arms extended.",
+      "Pull the band apart until it touches your chest, squeezing your shoulder blades together.",
+      "Return slowly to the starting position."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000075",
+    "name": "Banded Face Pull",
+    "primary_muscle": "shoulders",
+    "secondary_muscles": ["back"],
+    "equipment": "bands",
+    "instructions": [
+      "Anchor a resistance band at face height and step back to create tension.",
+      "Pull the band toward your face while flaring your elbows out.",
+      "Return slowly."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000076",
+    "name": "Treadmill Run",
+    "primary_muscle": "cardio",
+    "secondary_muscles": ["quads", "hamstrings", "calves"],
+    "equipment": "machine",
+    "instructions": [
+      "Set your desired speed and incline on the treadmill.",
+      "Maintain an upright posture and steady stride for your target duration."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000077",
+    "name": "Rowing Machine",
+    "primary_muscle": "cardio",
+    "secondary_muscles": ["back", "quads", "core"],
+    "equipment": "machine",
+    "instructions": [
+      "Strap your feet in and grab the handle with an overhand grip.",
+      "Drive with your legs first, then lean back slightly and pull the handle to your lower chest.",
+      "Extend your arms, hinge forward, and bend your knees to return."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000078",
+    "name": "Stationary Bike",
+    "primary_muscle": "cardio",
+    "secondary_muscles": ["quads", "calves"],
+    "equipment": "machine",
+    "instructions": [
+      "Adjust seat height so your knee has a slight bend at the bottom of the pedal stroke.",
+      "Pedal at your target cadence and resistance."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000079",
+    "name": "Smith Machine Bench Press",
+    "primary_muscle": "chest",
+    "secondary_muscles": ["triceps", "shoulders"],
+    "equipment": "machine",
+    "instructions": [
+      "Center a flat bench under the Smith machine bar so it aligns with your mid-chest.",
+      "Unlatch the bar, lower it to your chest, and press back up."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000080",
+    "name": "Smith Machine Squat",
+    "primary_muscle": "quads",
+    "secondary_muscles": ["glutes", "hamstrings"],
+    "equipment": "machine",
+    "instructions": [
+      "Place the bar on your upper traps with feet slightly forward of the bar path.",
+      "Squat down to parallel and drive back up."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000081",
+    "name": "Barbell Shrug",
+    "primary_muscle": "back",
+    "secondary_muscles": ["forearms"],
+    "equipment": "barbell",
+    "instructions": [
+      "Hold a barbell in front of your thighs with arms straight.",
+      "Elevate your shoulders straight up toward your ears, pause, and lower slowly."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000082",
+    "name": "Dumbbell Shrug",
+    "primary_muscle": "back",
+    "secondary_muscles": ["forearms"],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Hold heavy dumbbells at your sides with arms straight.",
+      "Shrug your shoulders straight up, hold briefly, and lower under control."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000083",
+    "name": "Incline Dumbbell Fly",
+    "primary_muscle": "chest",
+    "secondary_muscles": ["shoulders"],
+    "equipment": "dumbbell",
+    "instructions": [
+      "Lie on a 30-degree incline bench holding dumbbells above your upper chest.",
+      "Open your arms wide with a soft elbow bend until you feel a stretch, then squeeze back together."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000084",
+    "name": "Cable Reverse Fly",
+    "primary_muscle": "shoulders",
+    "secondary_muscles": ["back"],
+    "equipment": "cable",
+    "instructions": [
+      "Set two pulleys to shoulder height without attachments or with single handles.",
+      "Cross your arms to grab opposite cables and pull them out and back, squeezing your rear delts."
+    ]
+  },
+  {
+    "id": "10000000-0000-4000-8000-000000000085",
+    "name": "Back Extension",
+    "primary_muscle": "hamstrings",
+    "secondary_muscles": ["glutes", "back"],
+    "equipment": "bodyweight",
+    "instructions": [
+      "Position yourself on a 45-degree hyperextension bench with the pad below your hip crease.",
+      "Hinge down with a neutral spine, then squeeze your glutes and hamstrings to return to a straight line."
+    ]
+  }
+]

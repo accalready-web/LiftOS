@@ -2,6 +2,12 @@ import { create } from 'zustand';
 import type { Session, User } from '@supabase/supabase-js';
 import { supabase, isSupabaseConfigured } from '@/lib/supabase';
 import { localDb, LOCAL_USER_ID } from '@/lib/storage';
+import { seedSystemExercisesIfNeeded } from '@/services/seedService';
+import {
+  subscribeSyncState,
+  syncWithSupabase,
+  type SyncResult,
+} from '@/services/syncEngine';
 
 // ─── Types ──────────────────────────────────────────────────────
 
@@ -15,6 +21,7 @@ interface AuthState {
   isLoading: boolean;
   syncStatus: SyncStatusType;
   lastSyncedAt: string | null;
+  syncError: string | null;
   error: string | null;
 }
 
@@ -27,12 +34,14 @@ interface AuthActions {
   ) => Promise<{ success: boolean; needsEmailConfirmation: boolean }>;
   signOut: () => Promise<void>;
   continueLocalOnly: () => void;
+  syncNow: () => Promise<SyncResult>;
   setSyncStatus: (status: SyncStatusType, lastSyncedAt?: string | null) => void;
   clearError: () => void;
   getActiveUserId: () => string;
 }
 
 let authSubscriptionRegistered = false;
+let syncSubscriptionRegistered = false;
 
 // ─── Store ──────────────────────────────────────────────────────
 
@@ -44,13 +53,27 @@ export const useAuthStore = create<AuthState & AuthActions>((set, get) => ({
   isLoading: false,
   syncStatus: isSupabaseConfigured ? 'idle' : 'offline',
   lastSyncedAt: null,
+  syncError: null,
   error: null,
 
   initialize: async () => {
     if (get().isInitialized) return;
 
+    if (!syncSubscriptionRegistered) {
+      syncSubscriptionRegistered = true;
+      subscribeSyncState((status, lastSyncedAt, syncError) => {
+        set((state) => ({
+          syncStatus: status,
+          lastSyncedAt:
+            lastSyncedAt !== undefined ? lastSyncedAt : state.lastSyncedAt,
+          syncError: syncError !== undefined ? syncError : state.syncError,
+        }));
+      });
+    }
+
     try {
       await localDb.init();
+      await seedSystemExercisesIfNeeded();
       const lastSyncedAt = await localDb.getLastSyncedAt();
 
       if (!supabase) {
@@ -77,6 +100,10 @@ export const useAuthStore = create<AuthState & AuthActions>((set, get) => ({
         lastSyncedAt,
         syncStatus: session ? 'idle' : 'offline',
       });
+
+      if (session?.user) {
+        void get().syncNow();
+      }
 
       if (!authSubscriptionRegistered) {
         authSubscriptionRegistered = true;
@@ -132,6 +159,11 @@ export const useAuthStore = create<AuthState & AuthActions>((set, get) => ({
       syncStatus: 'idle',
       error: null,
     });
+
+    if (data.user) {
+      void get().syncNow();
+    }
+
     return true;
   },
 
@@ -169,6 +201,10 @@ export const useAuthStore = create<AuthState & AuthActions>((set, get) => ({
       error: null,
     });
 
+    if (data.session?.user) {
+      void get().syncNow();
+    }
+
     return { success: true, needsEmailConfirmation };
   },
 
@@ -181,12 +217,18 @@ export const useAuthStore = create<AuthState & AuthActions>((set, get) => ({
       user: null,
       isLocalOnly: false,
       syncStatus: 'offline',
+      syncError: null,
       error: null,
     });
   },
 
   continueLocalOnly: () => {
     set({ isLocalOnly: true, syncStatus: 'offline', error: null });
+  },
+
+  syncNow: async () => {
+    const userId = get().getActiveUserId();
+    return syncWithSupabase(userId);
   },
 
   setSyncStatus: (syncStatus, lastSyncedAt) => {

@@ -1,7 +1,7 @@
 # LiftOS — Project Context
 
 > สรุปบริบทโปรเจกต์สำหรับตั้งต้นแชทถัดไป
-> **อัปเดตล่าสุด:** 2026-11-26 | **Phase:** `Implementation — Step 1.4 Ready`
+> **อัปเดตล่าสุด:** 2026-11-26 | **Phase:** `Implementation — Step 2.3 Ready`
 
 ---
 
@@ -42,17 +42,20 @@ LiftOS/
 - ✅ **Step 1.1** — Project Init: Expo SDK 58 + Expo Router + dependencies + `src/` structure + `tsc` pass
 - ✅ **Step 1.2** — Theme, Design Tokens & Responsive Navigation Shell: `theme.ts`, `useSettingsStore.ts`, `(tabs)/_layout.tsx` (Bottom Tabs / Sidebar), `MiniWorkoutBar.tsx`, placeholder tab screens + `tsc` pass
 - ✅ **Step 1.3** — Supabase Schema, Auth & Local Offline Storage Layer: `0001_initial_schema.sql` (9 tables + RLS), `types/`, `supabase.ts`, cross-platform `storage/` (`sqlite.native.ts` + `web.web.ts`), `useAuthStore.ts`, `(auth)/login.tsx`
+- ✅ **Step 1.4** — Seed Exercises & Sync Engine: `seedExercises.json` (85 exercises), `seedService.ts`, `syncEngine.ts` (Push Outbox → Pull Delta + LWW), auto-sync on launch/foreground/reconnect, `Sync Now` UI + `tsc` pass
+- ✅ **Step 2.1** — Exercise Library & Custom Exercises: `uuid.ts`, `constants/exercises.ts`, `exerciseService.ts`, `ExercisePicker`, `CustomExerciseModal`, `ExerciseDetailView`, `(tabs)/exercises.tsx` (responsive split-pane), `exercises/[id].tsx` + `tsc` pass
+- ✅ **Step 2.2** — Routine Folders & Routine Builder: `routineService.ts`, `FolderModal`, `RoutineCard`, `(tabs)/index.tsx` (Workouts Hub), `routine/[id].tsx` (Mobile Modal / Desktop Split-pane Routine Builder) + `tsc` pass
 
 ---
 
-## 3. งานถัดไป: Step 1.4 — Seed Exercises & Sync Engine
+## 3. งานถัดไป: Step 2.3 — Active Workout Logger (Core In-Gym UX)
 
-อ้างอิง: `docs/02_DESIGN.md` (Sections 1.2, 4.2) และ `docs/03_TASKS.md` (Step 1.4)
+อ้างอิง: `docs/02_DESIGN.md` (Sections 2.2, 3.2 #4, 4.2 #7–9) และ `docs/03_TASKS.md` (Step 2.3)
 
-- [ ] `src/constants/seedExercises.json` — คลังท่าพื้นฐานจาก `free-exercise-db` พร้อม Deterministic UUIDs
-- [ ] Auto-seed ลง Local DB เมื่อเปิดแอปครั้งแรก
-- [ ] `src/services/syncEngine.ts` — Push Outbox (เรียงตาม Dependency) → Pull Delta (Last-Write-Wins + Soft Delete)
-- [ ] เชื่อมต่อ Auto-sync เมื่อเปิดแอป/กลับมามีอินเทอร์เน็ต และปุ่ม `Sync Now`
+- [ ] `src/stores/useActiveWorkoutStore.ts` — Auto-save ลง `active_workout_draft` ทุกครั้งที่แก้ไข
+- [ ] `src/services/workoutService.ts` — ดึงค่า `Previous` จาก Session ล่าสุด, แปลงหน่วย `kg`/`lbs`, คำนวณ `total_volume_kg` และ `total_sets`
+- [ ] `app/workout/active.tsx` & `src/components/workout/` (`ExerciseCard`, `SetRow`, `SetTypeBadge`) — Elapsed Timer, Fill Previous, Set Type (`W`/`N`/`D`/`F`), ปุ่ม `✓` 44×44+ dp, หน้าต่างสรุปก่อน Finish
+- [ ] เชื่อมต่อ `MiniWorkoutBar` และปุ่ม `Start Empty Workout` / `Start Routine`
 
 ### Backlog (Steps 1.3 → 3.3)
 | Step | หัวข้อ |
