@@ -1,7 +1,7 @@
 # LiftOS — Project Status
 
-- **Current Phase:** Implementation - Phase 1: Setup & Core Data (Step 1.2 Done → Step 1.3 Ready)
-- **Last Updated:** 2026-11-25
+- **Current Phase:** Implementation - Phase 1: Setup & Core Data (Step 1.3 Done → Step 1.4 Ready)
+- **Last Updated:** 2026-11-26
 
 ## Completed
 - [x] Initialized `LiftOS` project structure for multi-machine Git workflow and phased chats.
@@ -19,6 +19,15 @@
   - Updated `app/_layout.tsx` — Root layout now reads theme from settings store for dynamic `StatusBar` style and background color
   - Removed old `app/index.tsx` placeholder (replaced by `(tabs)/index.tsx`)
   - `tsc --noEmit` passes with zero errors
+- [x] Completed **Step 1.3 (Supabase Schema, Auth & Local Offline Storage Layer)**:
+  - Created `supabase/migrations/0001_initial_schema.sql` — 9 tables (`user_settings`, `exercises`, `routine_folders`, `routines`, `routine_exercises`, `routine_sets`, `workouts`, `workout_exercises`, `workout_sets`), indexes, and RLS policies (`auth.uid() = user_id` + system exercises read policy)
+  - Created `src/types/settings.ts` & `src/types/database.ts` — TypeScript interfaces matching Supabase/Local DB schema + `ActiveWorkoutDraft` & `PreviousSetPerformance`
+  - Updated `src/stores/useSettingsStore.ts` — Reused `SettingsState` and `WeightUnit` from `src/types/settings.ts`
+  - Created `src/lib/supabase.ts` — Supabase client with cross-platform auth storage adapter (`expo-secure-store` on native, `localStorage` on web) and graceful unconfigured `.env` handling
+  - Created Cross-platform Local DB Abstraction (`src/lib/storage/interface.ts`, `migrations.ts`, `sqlite.native.ts`, `web.web.ts`, `driver.native.ts`, `driver.web.ts`, `driver.ts`, `index.ts`)
+  - Created `src/stores/useAuthStore.ts` — Session state, `initialize()`, `signIn()`, `signUp()`, `signOut()`, `continueLocalOnly()`, and `reassignLocalUser()` on login
+  - Created `app/(auth)/login.tsx` & updated `app/_layout.tsx` — Responsive Sign In / Sign Up screen + Local-Only offline mode + auth/local-only routing guard
+  - Note: `node_modules` is not installed in this workspace yet, so `tsc --noEmit` should be run after `npm install`
 
 ## Key Decisions & Files Changed
 - **Updated `docs/01_BRIEF.md`:** Finalized LiftOS brief (Hevy-inspired personal workout tracker).
@@ -41,7 +50,7 @@
   - `src/components/layout/MiniWorkoutBar.tsx` — Mini workout bar component
 
 ## In Progress / Next Step
-- [ ] Start **Implementation Phase 1 — Step 1.3 (Supabase Schema, Auth & Local Offline Storage Layer)**: Read `STATUS.md` and `docs/02_DESIGN.md` (Sections 1, 4), then create Supabase migration SQL (9 tables + RLS), TypeScript types (`src/types/`), Supabase client (`src/lib/supabase.ts`), cross-platform Local DB abstraction (`src/lib/storage/`), Auth store + Login screen.
+- [ ] Start **Implementation Phase 1 — Step 1.4 (Seed Exercises & Sync Engine)**: Read `STATUS.md`, `docs/02_DESIGN.md` (Section 1.2, 4.2), and `docs/03_TASKS.md` (Step 1.4), then create `src/constants/seedExercises.json` with deterministic UUIDs, auto-seed logic on first launch, and `src/services/syncEngine.ts` (Push Outbox → Pull Delta with Last-Write-Wins & Soft Delete).
 
 ## Key Files
 - `GEMINI.md` — Global project rules for Antigravity

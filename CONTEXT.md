@@ -1,7 +1,7 @@
 # LiftOS — Project Context
 
 > สรุปบริบทโปรเจกต์สำหรับตั้งต้นแชทถัดไป
-> **อัปเดตล่าสุด:** 2026-11-25 | **Phase:** `Implementation — Step 1.3 Ready`
+> **อัปเดตล่าสุด:** 2026-11-26 | **Phase:** `Implementation — Step 1.4 Ready`
 
 ---
 
@@ -41,22 +41,18 @@ LiftOS/
 - ✅ **Phase 03** — Task Breakdown: 12 Steps (`docs/03_TASKS.md`)
 - ✅ **Step 1.1** — Project Init: Expo SDK 58 + Expo Router + dependencies + `src/` structure + `tsc` pass
 - ✅ **Step 1.2** — Theme, Design Tokens & Responsive Navigation Shell: `theme.ts`, `useSettingsStore.ts`, `(tabs)/_layout.tsx` (Bottom Tabs / Sidebar), `MiniWorkoutBar.tsx`, placeholder tab screens + `tsc` pass
+- ✅ **Step 1.3** — Supabase Schema, Auth & Local Offline Storage Layer: `0001_initial_schema.sql` (9 tables + RLS), `types/`, `supabase.ts`, cross-platform `storage/` (`sqlite.native.ts` + `web.web.ts`), `useAuthStore.ts`, `(auth)/login.tsx`
 
 ---
 
-## 3. งานถัดไป: Step 1.3 — Supabase Schema, Auth & Local Offline Storage Layer
+## 3. งานถัดไป: Step 1.4 — Seed Exercises & Sync Engine
 
-อ้างอิง: `docs/02_DESIGN.md` (Sections 1, 4) และ `docs/03_TASKS.md` (Step 1.3)
+อ้างอิง: `docs/02_DESIGN.md` (Sections 1.2, 4.2) และ `docs/03_TASKS.md` (Step 1.4)
 
-- [ ] `supabase/migrations/0001_initial_schema.sql` — 9 ตาราง + Indexes + RLS Policies
-- [ ] `src/types/database.ts` + `src/types/settings.ts` — TypeScript interfaces ตรงตาม Data Model
-- [ ] `src/lib/supabase.ts` — Supabase client + Auth storage adapter
-- [ ] `src/lib/storage/interface.ts` — Cross-platform Local DB abstraction interface
-- [ ] `src/lib/storage/sqlite.native.ts` — SQLite implementation (Android)
-- [ ] `src/lib/storage/web.web.ts` — IndexedDB/Web Storage implementation (Expo Web)
-- [ ] `src/lib/storage/migrations.ts` — Schema creation & seed loader
-- [ ] `src/stores/useAuthStore.ts` — User session & sync status
-- [ ] `app/(auth)/login.tsx` — Email/Password Sign In & Sign Up + Local-first mode
+- [ ] `src/constants/seedExercises.json` — คลังท่าพื้นฐานจาก `free-exercise-db` พร้อม Deterministic UUIDs
+- [ ] Auto-seed ลง Local DB เมื่อเปิดแอปครั้งแรก
+- [ ] `src/services/syncEngine.ts` — Push Outbox (เรียงตาม Dependency) → Pull Delta (Last-Write-Wins + Soft Delete)
+- [ ] เชื่อมต่อ Auto-sync เมื่อเปิดแอป/กลับมามีอินเทอร์เน็ต และปุ่ม `Sync Now`
 
 ### Backlog (Steps 1.3 → 3.3)
 | Step | หัวข้อ |

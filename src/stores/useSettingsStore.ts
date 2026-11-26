@@ -2,20 +2,9 @@ import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { ThemeMode } from '@/constants/theme';
+import type { SettingsState, WeightUnit } from '@/types/settings';
 
-// ─── Types ──────────────────────────────────────────────────────
-
-export type WeightUnit = 'kg' | 'lbs';
-
-export interface SettingsState {
-  theme: ThemeMode;
-  defaultWeightUnit: WeightUnit;
-  defaultRestSeconds: number;
-  barbellWeightKg: number;
-  barbellWeightLbs: number;
-  availablePlatesKg: number[];
-  availablePlatesLbs: number[];
-}
+export type { SettingsState, WeightUnit };
 
 interface SettingsActions {
   setTheme: (theme: ThemeMode) => void;
